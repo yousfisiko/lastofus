@@ -784,80 +784,265 @@
             </div>
 
             <script>
-                 let products = [
-    { id: 1, name: "Concombre Skhirat-خيار الصخيرات", price: 6, image: "https://souyktifood.ma/pafeefah/2024/01/concoumbre-beldi1.jpg", description: "Rafraîchissants, croquants et naturellement légers, nos concombres apportent une touche de fraîcheur irrésistible à vos repas !" },
-    { id: 2, name: "Coriandre Persil Oulad zian-قزبر و معدنوس ولاد زيان", price: 15.50, image: "https://www.fastandfresh.ma/wp-content/uploads/2020/09/coriandre_454x454.jpg", description: "Le prix est par boite." },
-    { id: 3, name: "Cornichon-مخلل الخيار", price: 11.50, image: "https://i.pinimg.com/originals/ab/de/7d/abde7d5e0bba793b237678f5a76ffe8b.jpg", description: "Croquants, frais et délicieusement acidulés, nos cornichons apportent une touche de saveur irrésistible à tous vos repas !" },
-    { id: 4, name: "Framboise Boite-علبة الفرونبواز", price: 8.50, image: "https://tse4.mm.bing.net/th/id/OIP.iXYRSNy-0TtNrx78c-y50gHaE8?rs=1&pid=ImgDetMain&o=7&rm=3", description: "Découvrez la douceur et la fraîcheur irrésistible de nos framboises, un plaisir naturel à savourer dès aujourd’hui !" },
-    { id: 5, name: "Fruit de dragon-فاكهة التنين", price: 75, image: "https://www.agrimaroc.ma/wp-content/uploads/fruit-dragon.png", description: "Exotique, juteux et riche en saveurs, notre fruit du dragon apporte une touche de fraîcheur et d’originalité irrésistible à vos envies gourmandes !" },
-    { id: 6, name: "Gingembre-الزنجبيل", price: 35, image: "https://www.justfood.tv/UserFiles/ginger09082022.jpg", description: "Aromatique, frais et naturellement tonifiant, notre gingembre apporte une touche de saveur intense et revigorante à toutes vos recettes !" },
-    { id: 7, name: "Grenade-رمان", price: 6.30, image: "https://www.docteur-fitness.com/wp-content/uploads/2022/12/grenade-fruit.jpg", description: "un fruit juteux et vitaminé, parfait pour vos jus, salades et desserts !" },
-    { id: 8, name: "Grenaille blanche-بطاطس كرنيل بيضاء", price: 7, image: "https://www.fresh.fr/wp-content/uploads/2022/12/9060-Pomme-de-terre-grenaille-1920x1080.jpg", description: "de petites pommes de terre tendres et savoureuses, idéales pour rôtir, sauter ou en accompagnement gourmand !" },
-    { id: 9, name: "Grenaille rouge-بطاطس كرنيل حمراء", price: 7, image: "https://media.carrefour.fr/medias/9473b99e01e832a4bbefac52199aba54/p_540x540/3276550206033-photosite-20150617-162718-0.jpg", description: "petites pommes de terre savoureuses et colorées, parfaites à rôtir !" },
-    { id: 10, name: "Cardon oulad zian-خرشف أولاد زيان", price: 4.50, image: "https://tse1.mm.bing.net/th/id/OIP.AHK3zvAKVII_9rnXF_qr6gHaFw?w=1388&h=1080&rs=1&pid=ImgDetMain&o=7&rm=3", description: "Le prix est par boite." },
-    { id: 11, name: "Carotte extra-جزر إكسترا", price: 5.50, image: "https://tse2.mm.bing.net/th/id/OIP.LtvWlq6O5oMfRY05bxrmhgHaGe?rs=1&pid=ImgDetMain&o=7&rm=3", description: "fraîche, croquante, naturellement sucrée !" },
-    { id: 12, name: "Poire conference cagette-إجاص كونفرونس كاجيط ", price: 21.50, image: "https://tse4.mm.bing.net/th/id/OIP.Wm9uezeUI2mI2aTVj_yljAHaFp?rs=1&pid=ImgDetMain&o=7&rm=3", description: "juteuses, sucrées et prêtes à savourer" },
-    { id: 13, name: "Piment fort ballouta-فلفلة حارة بلوطة", price: 6.30, image: "https://th.bing.com/th/id/R.60f4302fd9ae1c9f125a0e9272a05118?rik=HfSyoVVq0WpyMw&pid=ImgRaw&r=0", description: "intense, piquant, plein de saveur !" },
-    { id: 14, name: "Carotte Ouled Zian Vrac-جزر اولاد زيان فراك", price: 4.50, image: "https://tse4.mm.bing.net/th/id/OIP.FNEBJOAoht88SedMh0B1UwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3", description: "fraîches, croquantes et pleines de goût !" },
-    { id: 15, name: "Poire Mouska-إجاص موسكا", price: 25, image: "https://th.bing.com/th/id/R.33b10263a269d26335a780af425d02f0?rik=mWDAbtZM9Sj%2flA&pid=ImgRaw&r=0", description: "juteuses, sucrées et irrésistibles !" },
-    { id: 16, name: "Poire rocha vrac-إجاص روشا فراك", price: 18.50, image: "https://iod.keplrstatic.com/api/ar_1.25,g_north,c_fill/ar_1.5,w_800,q_70,c_fill,f_auto,dpr_auto/mon_marche/7250_Poire_Rocha.jpg", description: "fraîches, juteuses et naturellement sucrées !" },
-    { id: 17, name: "Poire Rocha cagette libre-إجاص روجا كاجيط", price: 24.50, image: "https://th.bing.com/th/id/R.b0d70ccbc458b518dc8cd1708faa6275?rik=N0%2fTZl14rdnHXA&pid=ImgRaw&r=0", description: "savoureuses, juteuses et prêtes à croquer !" },
-    { id: 18, name: "Poire williams-إجاص ويليامز مشمع", price: 20.50, image: "https://th.bing.com/th/id/OIP.K8KEdoVwEFfYXJ0gtadlLgAAAA?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3", description: "sucrées, juteuses et délicieusement parfumées !" },
-    { id: 19, name: "Pomme de terre blanche Oulad zian-بطاطس بيضاء اولاد زيان", price: 4.80, image: "https://isabelleinc.ca/wp-content/uploads/2018/05/patate-blanche-1024x768.jpg", description: "fraîches, savoureuses et polyvalentes !" },
-    { id: 20, name: "Pomme de Terre Calocase-بطاطس قصبية", price: 5, image: "https://tse4.mm.bing.net/th/id/OIP.xZPyHIHLXQtT9hcekpHljQHaFr?rs=1&pid=ImgDetMain&o=7&rm=3", description: "le goût qui fait craquer !" },
-    { id: 21, name: "Pomme de terre douce orange/بطاطا حلوة ليمونة شمالية", price: 8, image: "https://th.bing.com/th/id/R.73e88cfcab1f1eddb8b0f5cd242fc15d?rik=%2fl%2fSsBvxfhAQEQ&riu=http%3a%2f%2fnutriments1.n.u.pic.centerblog.net%2f72141-patate-douce.jpg&ehk=JyuVsFFhcgQ4TdKa9pCORvSxt%2bEuKFxEwCBMCRlCVc8%3d&risl=&pid=ImgRaw&r=0", description: "Douceur orange, saveur qui séduit !" },
-    { id: 22, name: "Fraise espagnole congelée-فريز اسباني مثلج", price: 50, image: "https://tse4.mm.bing.net/th/id/OIP.tScQ_lZyx3L11XVtf4Vv5QHaEc?w=1000&h=600&rs=1&pid=ImgDetMain&o=7&rm=3", description: "Fraise espagnole, fraîcheur qui dure !" },
-    { id: 23, name: "Fraise Vrac- فراولة فراك", price: 20, image: "https://tse3.mm.bing.net/th/id/OIP.kGsfJ9KFlhnEM-DUTmFH7AHaHa?rs=1&pid=ImgDetMain&o=7&rm=3", description: "nature et gourmandes !" },
-    { id: 24, name: "Fraise en 8 barquettes-فراولة معلبة", price: 37, image: "https://tse4.mm.bing.net/th/id/OIP.KQLH0SPe5pkqGo_U95YVjQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3", description: "Fraîcheur et douceur dans chaque barquette !" },
-    { id: 25, name: "Poivron rouge Agadir-فلفلة حمراء أكادير", price: 6, image: "https://tse4.mm.bing.net/th/id/OIP.l_uDxEsp9wMdzqinJ7XXnwHaE8?rs=1&pid=ImgDetMain&o=7&rm=3", description: "Poivron rouge d’Agadir — fraîcheur du Sud, goût authentique !" },
-    { id: 26, name: "Poivron rouge extra- فلفله حمراء اكسترا", price: 7, image: "https://blog.mon-marche.fr/wp-content/uploads/2021/07/8805_Poivron-filet.png", description: "couleur, croquant et saveur garantie !" },
-    { id: 27, name: "Poivron vert Agadir-فلفلة خضراء أكادير", price: 5.50, image: "https://th.bing.com/th/id/OIP.jj8fu0DrN21LJJ3x33PETQHaE7?o=7rm=3&rs=1&pid=ImgRaw&o=7&rm=3", description: "fraîcheur et croquant du Sud !" },
-    { id: 29, name: "Pomme Granny C16-تفاح أخضر كاجيت", price: 17, image: "https://tse3.mm.bing.net/th/id/OIP.mIEh75DzwhMgC9SR3QWPEwHaE8?rs=1&pid=ImgDetMain&o=7&rm=3", description: "croquante, juteuse et pleine de fraîcheur !" },
-    { id: 30, name: "Pomme Granny Smith C30 32-تفاح أخضر", price: 70, image: "https://tse1.mm.bing.net/th/id/OIP.Fmnq7tZeoRmKzw4EbU2KPgHaHa?w=1000&h=1000&rs=1&pid=ImgDetMain&o=7&rm=3", description: "acidulée, croquante et pleine de fraîcheur !" },
-    { id: 31, name: "Petit coing-لقيم", price: 12, image: "https://tse3.mm.bing.net/th/id/OIP.Oj2bgqbN_4U7Wvh6EzFHKwHaFW?rs=1&pid=ImgDetMain&o=7&rm=3", description: "saveur douce et parfum d’automne !" },
-    { id: 32, name: "Petit pois-جلبانة ", price: 13.50, image: "https://th.bing.com/th/id/R.3ecc1f6cf607dd150dbf9f4497685a7d?rik=k7KVg67g0xuJcw&pid=ImgRaw&r=0", description: "fraîcheur et douceur dans chaque bouchée !" },
-    { id: 33, name: "Piments antillais Sénégalais-فلفل السنغالي", price: 19.50, image: "https://www.academiedugout.fr/images/7525/1200-auto/piment-antillais-copy.jpg", description: "piquant, parfumé et authentique !" },
-    { id: 34, name: "Sfarjal lgharb-سفرجل الغرب", price: 10.50, image: "https://tse2.mm.bing.net/th/id/OIP.l5mmZ4LTc38WKPG0dqUT5QHaFj?rs=1&pid=ImgDetMain&o=7&rm=3", description: "Goûtez le coing, douceur et nature !" },
-    { id: 35, name: "Sucrine Oulad Zian-خص اولاد زيان", price: 3.50, image: "https://tse1.mm.bing.net/th/id/OIP.uo-ZxOdw3hSWC4lpd-CVmwHaFj?rs=1&pid=ImgDetMain&o=7&rm=3", description: "croquez la fraîcheur !" },
-    { id: 36, name: "Tomate Agadir caisse-طماطم أكادير صندوق", price: 4.50, image: "https://th.bing.com/th/id/R.953ac6c69964009d6375fd51ffa99f22?rik=c%2fxTXffol%2fFInQ&pid=ImgRaw&r=0", description: "fraîcheur et goût du soleil !" },
-    { id: 37, name: "Artichaut-قوق", price: 10, image: "https://th.bing.com/th/id/R.6b9fb0b7dfb3204493543073e9b2c787?rik=iDg4X4c4OzI2nQ&riu=http%3a%2f%2fmodeleprimeur.monpetitdrive.fr%2fpub%2fbanque_images%2f201907%2flegumes%2fartichaut1.jpeg&ehk=e%2fy2aV1oW0f6JLWPgHXUQ54t0pjkdorRahTN1q6miks%3d&risl=&pid=ImgRaw&r=0", description: "croquez la fraîcheur du terroir !" },
-    { id: 38, name: "Asperge Frais boite-الهليون الطازج", price: 68, image: "https://e4huo7t9qwq.exactdn.com/wp-content/uploads/2025/02/ASPERGE.png", description: "Asperges fraîches en boîte – Croquantes, savoureuses et prêtes à savourer à tout moment !" },
-    { id: 39, name: "Aubergine Agadir-دنجال أكادير", price: 4, image: "https://tse1.mm.bing.net/th/id/OIP.v9fQUBblyZQNl2g71-rVoQHaE7?rs=1&pid=ImgDetMain&o=7&rm=3", description: "Douces, fondantes et parfaites pour toutes vos recettes !" },
-    { id: 40, name: "Pomme de terre rouge frigo-بطاطاس حمراء مبردة", price: 5.30, image: "", description: "" },
-    { id: 41, name: "Pomme de terre rouge frite GC-بطاطاس حمراء فريت كبيرة", price: 6.50, image: "https://locavor.fr/data/produits/7/171131/pomme-de-terre-rouge-cherie-sac-de-5kg-171131-1648103317-1.jpg", description: "Croquantes, savoureuses et idéales pour toutes vos recettes !" },
-    { id: 42, name: "Pomme de terre rouge Ouled zian-بطاطس حمراءI reviewed your code carefully. Here are the issues in your `products` array:
+                
+// Database simulation for products (still in memory)
+                let products = [
+                    {
+                        id: 1,
+                        name: "Concombre Skhirat-خيار الصخيرات",
+                        price: 6,
+                        image: "https://souyktifood.ma/pafeefah/2024/01/concoumbre-beldi1.jpg",
+                        description: "Rafraîchissants, croquants et naturellement légers, nos concombres apportent une touche de fraîcheur irrésistible à vos repas !"
+                    },
+                    {
+                        id: 2,
+                        name: "Coriandre Persil Oulad zian-قزبر و معدنوس ولاد زيان",
+                        price: 15.50,
+                        image: "https://www.fastandfresh.ma/wp-content/uploads/2020/09/coriandre_454x454.jpg",
+                        description: "Le prix est par boite."
+                    },
+                    {
+                        id: 3,
+                        name: "Cornichon-مخلل الخيار",
+                        price: 11.50,
+                        image: "https://i.pinimg.com/originals/ab/de/7d/abde7d5e0bba793b237678f5a76ffe8b.jpg",
+                        description: "Croquants, frais et délicieusement acidulés, nos cornichons apportent une touche de saveur irrésistible à tous vos repas !"
+                    },
+                
 
-1. **Duplicate `id` 34** – You have two products with the same `id`. IDs must be unique.
-2. **Price formatting** – Some prices have leading zeros (`08.50`, `03.50`, `04.50`, `05.30`, `06.50`) which are not invalid in JS but unconventional. You can leave them, or remove the leading zeros for consistency.
-3. **Empty `image` and `description`** – For `id: 39`, both fields are empty. You might want to fill them or leave them as placeholders.
+      {
+                        id: 4,
+                        name: "Framboise Boite-علبة الفرونبواز",
+                        price: 8.50,
+                        image: "https://tse4.mm.bing.net/th/id/OIP.iXYRSNy-0TtNrx78c-y50gHaE8?rs=1&pid=ImgDetMain&o=7&rm=3",
+                        description: "Découvrez la douceur et la fraîcheur irrésistible de nos framboises, un plaisir naturel à savourer dès aujourd’hui !"
+                    },
+                    {
+                        id: 5,
+                        name: "Fruit de dragon-فاكهة التنين",
+                        price: 75,
+                        image: "https://www.agrimaroc.ma/wp-content/uploads/fruit-dragon.png",
+                        description: "Exotique, juteux et riche en saveurs, notre fruit du dragon apporte une touche de fraîcheur et d’originalité irrésistible à vos envies gourmandes !"
+                    },
+                    {
+                        id: 6,
+                        name: "Gingembre-الزنجبيل",
+                        price: 35,
+                        image: "https://www.justfood.tv/UserFiles/ginger09082022.jpg",
+                        description: "Aromatique, frais et naturellement tonifiant, notre gingembre apporte une touche de saveur intense et revigorante à toutes vos recettes !"
+                     },
+                    {
+                        id: 7,
+                        name: "Grenade-رمان",
+                        price: 6.30,
+                        image: "https://www.docteur-fitness.com/wp-content/uploads/2022/12/grenade-fruit.jpg",
+                        description: "un fruit juteux et vitaminé, parfait pour vos jus, salades et desserts !"
+                    },
+                    {
+                        id: 8,
+                        name: "Grenaille blanche-بطاطس كرنيل بيضاء",
+                        price:7,
+                        image: "https://www.fresh.fr/wp-content/uploads/2022/12/9060-Pomme-de-terre-grenaille-1920x1080.jpg",
+                        description: "de petites pommes de terre tendres et savoureuses, idéales pour rôtir, sauter ou en accompagnement gourmand !"
+                    },
+                    {
+                        id: 9,
+                        name: "Grenaille rouge-بطاطس كرنيل حمراء",
+                        price:7,
+                        image: "https://media.carrefour.fr/medias/9473b99e01e832a4bbefac52199aba54/p_540x540/3276550206033-photosite-20150617-162718-0.jpg",
+                        description: "petites pommes de terre savoureuses et colorées, parfaites à rôtir !"
+                    },
+                      {
+                        id: 10,
+                        name: "Cardon oulad zian-خرشف أولاد زيان",
+                        price: 4.50,
+                        image: "https://tse1.mm.bing.net/th/id/OIP.AHK3zvAKVII_9rnXF_qr6gHaFw?w=1388&h=1080&rs=1&pid=ImgDetMain&o=7&rm=3",
+                        description: "Le prix est par boite."
+                    },
+                    {
+                        id: 11,
+                        name: "Carotte extra-جزر إكسترا",
+                        price:5.50,
+                        image: "https://tse2.mm.bing.net/th/id/OIP.LtvWlq6O5oMfRY05bxrmhgHaGe?rs=1&pid=ImgDetMain&o=7&rm=3",
+                        description: "fraîche, croquante, naturellement sucrée !"
+                    },
+                    {
+                        id: 12,
+                        name: "Poire conference cagette-إجاص كونفرونس كاجيط ",
+                        price:21.50,
+                        image: "https://tse4.mm.bing.net/th/id/OIP.Wm9uezeUI2mI2aTVj_yljAHaFp?rs=1&pid=ImgDetMain&o=7&rm=3",
+                        description: "juteuses, sucrées et prêtes à savourer" 
+                     },
+                     {
+                        id: 13,
+                        name: "Piment fort ballouta-فلفلة حارة بلوطة",
+                        price: 6.30,
+                        image: "https://th.bing.com/th/id/R.60f4302fd9ae1c9f125a0e9272a05118?rik=HfSyoVVq0WpyMw&pid=ImgRaw&r=0",
+                        description: "intense, piquant, plein de saveur !"
+                    },
+                    {
+                        id: 14,
+                        name: "Carotte Ouled Zian Vrac-جزر اولاد زيان فراك",
+                        price:4.50,
+                        image: "https://tse4.mm.bing.net/th/id/OIP.FNEBJOAoht88SedMh0B1UwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3",
+                        description: "fraîches, croquantes et pleines de goût !"
+                    },
+                    {
+                        id: 15,
+                        name: "Poire Mouska-إجاص موسكا",
+                        price:25,
+                        image: "https://th.bing.com/th/id/R.33b10263a269d26335a780af425d02f0?rik=mWDAbtZM9Sj%2flA&pid=ImgRaw&r=0",
+                        description: "juteuses, sucrées et irrésistibles !"   
+                     },
+                     {
+                        id: 16,
+                        name: "Poire rocha vrac-إجاص روشا فراك",
+                        price: 18.50,
+                        image: "https://iod.keplrstatic.com/api/ar_1.25,g_north,c_fill/ar_1.5,w_800,q_70,c_fill,f_auto,dpr_auto/mon_marche/7250_Poire_Rocha.jpg",
+                        description: "fraîches, juteuses et naturellement sucrées !"
+                    },
+                    {
+                        id: 17,
+                        name: "Poire Rocha cagette libre-إجاص روجا كاجيط",
+                        price:24.50,
+                        image: "https://th.bing.com/th/id/R.b0d70ccbc458b518dc8cd1708faa6275?rik=N0%2fTZl14rdnHXA&pid=ImgRaw&r=0",
+                        description: "savoureuses, juteuses et prêtes à croquer !"
+                    },
+                    {
+                        id: 18,
+                        name: "Poire williams-إجاص ويليامز مشمع",
+                        price:20.50,
+                        image: "https://th.bing.com/th/id/OIP.K8KEdoVwEFfYXJ0gtadlLgAAAA?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3",
+                        description: "sucrées, juteuses et délicieusement parfumées !" 
+                     },
+                     {
+                        id: 19,
+                        name: "Pomme de terre blanche Oulad zian-بطاطس بيضاء اولاد زيان",
+                        price: 04.80,
+                        image: "https://isabelleinc.ca/wp-content/uploads/2018/05/patate-blanche-1024x768.jpg",
+                        description: "fraîches, savoureuses et polyvalentes !"
+                    },
+                    {
+                        id: 20,
+                        name: "Pomme de Terre Calocase-بطاطس قصبية",
+                        price:5,
+                        image: "https://tse4.mm.bing.net/th/id/OIP.xZPyHIHLXQtT9hcekpHljQHaFr?rs=1&pid=ImgDetMain&o=7&rm=3",
+                        description: "le goût qui fait craquer !"
+                    },
+                     {
+                        id: 21,
+                        name: "Pomme de terre douce orange/بطاطا حلوة ليمونة شمالية",
+                        price:8,
+                        image: "https://th.bing.com/th/id/R.73e88cfcab1f1eddb8b0f5cd242fc15d?rik=%2fl%2fSsBvxfhAQEQ&riu=http%3a%2f%2fnutriments1.n.u.pic.centerblog.net%2f72141-patate-douce.jpg&ehk=JyuVsFFhcgQ4TdKa9pCORvSxt%2bEuKFxEwCBMCRlCVc8%3d&risl=&pid=ImgRaw&r=0",
+                        description: "Douceur orange, saveur qui séduit !" 
+                     },
+                     {
+                        id: 22,
+                        name: "Fraise espagnole congelée-فريز اسباني مثلج",
+                        price: 50,
+                        image: "https://tse4.mm.bing.net/th/id/OIP.tScQ_lZyx3L11XVtf4Vv5QHaEc?w=1000&h=600&rs=1&pid=ImgDetMain&o=7&rm=3",
+                        description: "Fraise espagnole, fraîcheur qui dure !"
+                    },
+                    {
+                        id: 23,
+                        name: "Fraise Vrac- فراولة فراك",
+                        price:20,
+                        image: "https://tse3.mm.bing.net/th/id/OIP.kGsfJ9KFlhnEM-DUTmFH7AHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
+                        description: "nature et gourmandes !"
+                    },
+                     {
+                        id: 24,
+                        name: "Fraise en 8 barquettes-فراولة معلبة",
+                        price:37,
+                        image: "https://tse4.mm.bing.net/th/id/OIP.KQLH0SPe5pkqGo_U95YVjQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
+                        description: "Fraîcheur et douceur dans chaque barquette !" 
+                     },
+                     {
+                        id: 25,
+                        name: "Poivron rouge Agadir-فلفلة حمراء أكادير",
+                        price: 6,
+                        image: "https://tse4.mm.bing.net/th/id/OIP.l_uDxEsp9wMdzqinJ7XXnwHaE8?rs=1&pid=ImgDetMain&o=7&rm=3",
+                        description: "Poivron rouge d’Agadir — fraîcheur du Sud, goût authentique !"
+                    },
+                    {
+                        id: 26,
+                        name: "Poivron rouge extra- فلفله حمراء اكسترا",
+                        price:7,
+                        image: "https://blog.mon-marche.fr/wp-content/uploads/2021/07/8805_Poivron-filet.png",
+                        description: "couleur, croquant et saveur garantie !"
+                    },
+                    {
+                        id: 27,
+                        name: "Poivron vert Agadir-فلفلة خضراء أكادير",
+                        price:5.50,
+                        image: "https://th.bing.com/th/id/OIP.jj8fu0DrN21LJJ3x33PETQHaE7?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3",
+                        description: "fraîcheur et croquant du Sud !" 
+                   },
+                    {
+                        id: 28,
+                        name: "Pomme Granny C16-تفاح أخضر كاجيت",
+                        price:17,
+                        image: "https://tse3.mm.bing.net/th/id/OIP.mIEh75DzwhMgC9SR3QWPEwHaE8?rs=1&pid=ImgDetMain&o=7&rm=3",
+                        description: "croquante, juteuse et pleine de fraîcheur !"
+                    },
+                    {
+                        id: 29,
+                        name: "Pomme Granny Smith C30 32-تفاح أخضر",
+                        price:70,
+                        image: "https://tse1.mm.bing.net/th/id/OIP.Fmnq7tZeoRmKzw4EbU2KPgHaHa?w=1000&h=1000&rs=1&pid=ImgDetMain&o=7&rm=3",
+                        description: "acidulée, croquante et pleine de fraîcheur !" 
+                   }, 
+                {
+                        id: 30,
+                        name: "Petit coing-لقيم",
+                        price: 12,
+                        image: "https://tse3.mm.bing.net/th/id/OIP.Oj2bgqbN_4U7Wvh6EzFHKwHaFW?rs=1&pid=ImgDetMain&o=7&rm=3",
+                        description: "saveur douce et parfum d’automne !"
+                    },
+                     {
+                        id: 31,
+                        name: "Petit coing-لقيم",
+                        price: 12,
+                        image: "https://tse3.mm.bing.net/th/id/OIP.Oj2bgqbN_4U7Wvh6EzFHKwHaFW?rs=1&pid=ImgDetMain&o=7&rm=3",
+                        description: "saveur douce et parfum d’automne !"
+                    },
+                    {
+                        id: 32,
+                        name: "Petit pois-جلبانة ",
+                        price:13.50,
+                        image: "https://th.bing.com/th/id/R.3ecc1f6cf607dd150dbf9f4497685a7d?rik=k7KVg67g0xuJcw&pid=ImgRaw&r=0",
+                        description: "fraîcheur et douceur dans chaque bouchée !"
+                    },
+                    {
+                        id: 33,
+                        name: "Piments antillais Sénégalais-فلفل السنغالي",
+                        price:19.50,
+                        image: "https://www.academiedugout.fr/images/7525/1200-auto/piment-antillais-copy.jpg",
+                        description: "piquant, parfumé et authentique !" 
+                   }, 
 
-Here’s the fixed version **without touching your original structure**:
-
-```javascript
-let products = [
-    // ... all your previous products
-    {
-        id: 34, // first 34 stays as is
+  {
+        id: 34, 
         name: "Sfarjal lgharb-سفرجل الغرب",
         price: 10.50,
         image: "https://tse2.mm.bing.net/th/id/OIP.l5mmZ4LTc38WKPG0dqUT5QHaFj?rs=1&pid=ImgDetMain&o=7&rm=3",
         description: "Goûtez le coing, douceur et nature !"
     },
     {
-        id: 35, // changed from 34 to 35
+        id: 35, 
         name: "Sucrine Oulad Zian-خص اولاد زيان",
-        price: 3.50, // removed leading zero
+        price: 3.50, 
         image: "https://tse1.mm.bing.net/th/id/OIP.uo-ZxOdw3hSWC4lpd-CVmwHaFj?rs=1&pid=ImgDetMain&o=7&rm=3",
         description: "croquez la fraîcheur !"
     },
     {
-        id: 36, // updated subsequent ids accordingly
+        id: 36, 
         name: "Tomate Agadir caisse-طماطم أكادير صندوق",
         price: 4.50,
         image: "https://th.bing.com/th/id/R.953ac6c69964009d6375fd51ffa99f22?rik=c%2fxTXffol%2fFInQ&pid=ImgRaw&r=0",
         description: "fraîcheur et goût du soleil !" 
     },
-    // continue updating ids incrementally for the rest
+    
     {
         id: 37,
         name: "Artichaut-قوق",
@@ -865,7 +1050,38 @@ let products = [
         image: "https://th.bing.com/th/id/R.6b9fb0b7dfb3204493543073e9b2c787?rik=iDg4X4c4OzI2nQ&riu=http%3a%2f%2fmodeleprimeur.monpetitdrive.fr%2fpub%2fbanque_images%2f201907%2flegumes%2fartichaut1.jpeg&ehk=e%2fy2aV1oW0f6JLWPgHXUQ54t0pjkdorRahTN1q6miks%3d&risl=&pid=ImgRaw&r=0",
         description: "croquez la fraîcheur du terroir !"
     },
-    // ... and so on for remaining products
+            
+                    {
+                        id: 38,
+                        name: "Asperge Frais boite-الهليون الطازج",
+                        price:68,
+                        image: "https://e4huo7t9qwq.exactdn.com/wp-content/uploads/2025/02/ASPERGE.png",
+                        description: "Asperges fraîches en boîte – Croquantes, savoureuses et prêtes à savourer à tout moment !"
+                    },
+                    {
+                        id: 39,
+                        name: "Aubergine Agadir-دنجال أكادير",
+                        price:4,
+                        image: "https://tse1.mm.bing.net/th/id/OIP.v9fQUBblyZQNl2g71-rVoQHaE7?rs=1&pid=ImgDetMain&o=7&rm=3",
+                        description: "Douces, fondantes et parfaites pour toutes vos recettes !" 
+                   },  
+                     {
+                        id: 40,
+                        name: "Pomme de terre rouge frigo-بطاطاس حمراء مبردة",
+                        price: 5.30,
+                        image: "https://locavor.fr/data/produits/7/171131/pomme-de-terre-rouge-cherie-sac-de-5kg-171131-1648103317-1.jpg",
+                        description: "fraîches et savoureuses, parfaites pour tous vos plats !"
+                    },
+                    {
+                        id: 41,
+                        name: "Pomme de terre rouge frite GC-بطاطاس حمراء فريت كبيرة",
+                        price:6.50,
+                        image: "https://locavor.fr/data/produits/7/171131/pomme-de-terre-rouge-cherie-sac-de-5kg-171131-1648103317-1.jpg",
+                        description: "Croquantes, savoureuses et idéales pour toutes vos recettes !"
+                    }
+
+
+    
 ];
 
 
